@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		926EC0811C6CD79E00CDAB09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0801C6CD79E00CDAB09 /* AppDelegate.swift */; };
-		926EC0831C6CD79E00CDAB09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0821C6CD79E00CDAB09 /* ViewController.swift */; };
-		926EC0861C6CD79E00CDAB09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926EC0841C6CD79E00CDAB09 /* Main.storyboard */; };
 		926EC0881C6CD79E00CDAB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926EC0871C6CD79E00CDAB09 /* Assets.xcassets */; };
-		926EC08B1C6CD79E00CDAB09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926EC0891C6CD79E00CDAB09 /* LaunchScreen.storyboard */; };
 		926EC0961C6CD79E00CDAB09 /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0951C6CD79E00CDAB09 /* TicTacToeTests.swift */; };
 		926EC0A11C6CD79E00CDAB09 /* TicTacToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0A01C6CD79E00CDAB09 /* TicTacToeUITests.swift */; };
+		926EC0AF1C6CD7E300CDAB09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926EC0AE1C6CD7E300CDAB09 /* LaunchScreen.storyboard */; };
+		926EC0B11C6CD80800CDAB09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926EC0B01C6CD80800CDAB09 /* Main.storyboard */; };
+		926EC0B31C6CD82C00CDAB09 /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0B21C6CD82C00CDAB09 /* StartingViewController.swift */; };
+		926EC0B51C6CD8A200CDAB09 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0B41C6CD8A200CDAB09 /* UIKitExtensions.swift */; };
+		926EC0B81C6CD95500CDAB09 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926EC0B61C6CD95500CDAB09 /* ReactiveCocoa.framework */; };
+		926EC0B91C6CD95500CDAB09 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926EC0B71C6CD95500CDAB09 /* Result.framework */; };
+		926EC0C01C6CDA0300CDAB09 /* RACUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0BF1C6CDA0300CDAB09 /* RACUtils.swift */; };
+		926EC0C21C6CDA6100CDAB09 /* Signals+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0C11C6CDA6100CDAB09 /* Signals+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +41,7 @@
 /* Begin PBXFileReference section */
 		926EC07D1C6CD79E00CDAB09 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		926EC0801C6CD79E00CDAB09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		926EC0821C6CD79E00CDAB09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		926EC0851C6CD79E00CDAB09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		926EC0871C6CD79E00CDAB09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		926EC08A1C6CD79E00CDAB09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		926EC08C1C6CD79E00CDAB09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		926EC0911C6CD79E00CDAB09 /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		926EC0951C6CD79E00CDAB09 /* TicTacToeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeTests.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 		926EC09C1C6CD79E00CDAB09 /* TicTacToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		926EC0A01C6CD79E00CDAB09 /* TicTacToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITests.swift; sourceTree = "<group>"; };
 		926EC0A21C6CD79E00CDAB09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		926EC0AE1C6CD7E300CDAB09 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		926EC0B01C6CD80800CDAB09 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		926EC0B21C6CD82C00CDAB09 /* StartingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
+		926EC0B41C6CD8A200CDAB09 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		926EC0B61C6CD95500CDAB09 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		926EC0B71C6CD95500CDAB09 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		926EC0BF1C6CDA0300CDAB09 /* RACUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACUtils.swift; sourceTree = "<group>"; };
+		926EC0C11C6CDA6100CDAB09 /* Signals+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Signals+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926EC0B81C6CD95500CDAB09 /* ReactiveCocoa.framework in Frameworks */,
+				926EC0B91C6CD95500CDAB09 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +89,7 @@
 		926EC0741C6CD79E00CDAB09 = {
 			isa = PBXGroup;
 			children = (
+				926EC0BE1C6CD9D600CDAB09 /* Frameworks */,
 				926EC07F1C6CD79E00CDAB09 /* TicTacToe */,
 				926EC0941C6CD79E00CDAB09 /* TicTacToeTests */,
 				926EC09F1C6CD79E00CDAB09 /* TicTacToeUITests */,
@@ -98,10 +111,11 @@
 			isa = PBXGroup;
 			children = (
 				926EC0801C6CD79E00CDAB09 /* AppDelegate.swift */,
-				926EC0821C6CD79E00CDAB09 /* ViewController.swift */,
-				926EC0841C6CD79E00CDAB09 /* Main.storyboard */,
+				926EC0BC1C6CD9B700CDAB09 /* View */,
+				926EC0BB1C6CD9A600CDAB09 /* Utils */,
 				926EC0871C6CD79E00CDAB09 /* Assets.xcassets */,
-				926EC0891C6CD79E00CDAB09 /* LaunchScreen.storyboard */,
+				926EC0B01C6CD80800CDAB09 /* Main.storyboard */,
+				926EC0AE1C6CD7E300CDAB09 /* LaunchScreen.storyboard */,
 				926EC08C1C6CD79E00CDAB09 /* Info.plist */,
 			);
 			path = TicTacToe;
@@ -125,6 +139,33 @@
 			path = TicTacToeUITests;
 			sourceTree = "<group>";
 		};
+		926EC0BB1C6CD9A600CDAB09 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				926EC0B41C6CD8A200CDAB09 /* UIKitExtensions.swift */,
+				926EC0BF1C6CDA0300CDAB09 /* RACUtils.swift */,
+				926EC0C11C6CDA6100CDAB09 /* Signals+Extensions.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		926EC0BC1C6CD9B700CDAB09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				926EC0B21C6CD82C00CDAB09 /* StartingViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		926EC0BE1C6CD9D600CDAB09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				926EC0B61C6CD95500CDAB09 /* ReactiveCocoa.framework */,
+				926EC0B71C6CD95500CDAB09 /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +176,7 @@
 				926EC0791C6CD79E00CDAB09 /* Sources */,
 				926EC07A1C6CD79E00CDAB09 /* Frameworks */,
 				926EC07B1C6CD79E00CDAB09 /* Resources */,
+				926EC0BA1C6CD95E00CDAB09 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -229,9 +271,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				926EC08B1C6CD79E00CDAB09 /* LaunchScreen.storyboard in Resources */,
+				926EC0B11C6CD80800CDAB09 /* Main.storyboard in Resources */,
+				926EC0AF1C6CD7E300CDAB09 /* LaunchScreen.storyboard in Resources */,
 				926EC0881C6CD79E00CDAB09 /* Assets.xcassets in Resources */,
-				926EC0861C6CD79E00CDAB09 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +293,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		926EC0BA1C6CD95E00CDAB09 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		926EC0791C6CD79E00CDAB09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				926EC0831C6CD79E00CDAB09 /* ViewController.swift in Sources */,
+				926EC0C01C6CDA0300CDAB09 /* RACUtils.swift in Sources */,
+				926EC0B31C6CD82C00CDAB09 /* StartingViewController.swift in Sources */,
+				926EC0C21C6CDA6100CDAB09 /* Signals+Extensions.swift in Sources */,
 				926EC0811C6CD79E00CDAB09 /* AppDelegate.swift in Sources */,
+				926EC0B51C6CD8A200CDAB09 /* UIKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,25 +354,6 @@
 			targetProxy = 926EC09D1C6CD79E00CDAB09 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		926EC0841C6CD79E00CDAB09 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				926EC0851C6CD79E00CDAB09 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		926EC0891C6CD79E00CDAB09 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				926EC08A1C6CD79E00CDAB09 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		926EC0A31C6CD79E00CDAB09 /* Debug */ = {
@@ -397,6 +441,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TicTacToe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackzach.TicTacToe;
@@ -408,6 +456,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TicTacToe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackzach.TicTacToe;
