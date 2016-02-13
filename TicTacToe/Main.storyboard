@@ -96,6 +96,9 @@
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="70" y="406" width="260" height="50"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="Smr-0h-NrJ" kind="show" identifier="showGame" id="jKb-dD-b8a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12941176470588237" green="0.18431372549019609" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
@@ -120,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="387"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="ERf-uy-oa8">
             <objects>
-                <viewController id="Smr-0h-NrJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" id="Smr-0h-NrJ" customClass="GameViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="odh-za-xuM"/>
                         <viewControllerLayoutGuide type="bottom" id="LKN-Ei-D2c"/>
@@ -138,7 +141,7 @@
                                 <color key="textColor" red="0.86274509799999999" green="0.1960784314" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vid-eO-fYO">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vid-eO-fYO" customClass="TicTacToeGrid" customModule="TicTacToe" customModuleProvider="target">
                                 <rect key="frame" x="149" y="149" width="302" height="302"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5p-K6-9ls">
@@ -434,6 +437,13 @@
                             <constraint firstItem="vid-eO-fYO" firstAttribute="centerX" secondItem="NVO-AK-K8b" secondAttribute="centerX" id="zvZ-BN-tE4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentPlayersTurnName" destination="4GC-lf-Tdd" id="iha-IW-Vuf"/>
+                        <outlet property="player1Name" destination="OyN-Yu-Shp" id="N6T-Mh-zDk"/>
+                        <outlet property="player1Score" destination="QF4-mE-brl" id="oO9-b5-ORe"/>
+                        <outlet property="player2Name" destination="8q9-uw-yyZ" id="T4y-q6-uHv"/>
+                        <outlet property="player2Score" destination="1ko-Bl-Ez7" id="MGZ-jt-717"/>
+                    </connections>
                 </viewController>
                 <view contentMode="scaleToFill" id="Pzk-qx-Fsa">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>

@@ -19,6 +19,12 @@
 		926EC0B91C6CD95500CDAB09 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926EC0B71C6CD95500CDAB09 /* Result.framework */; };
 		926EC0C01C6CDA0300CDAB09 /* RACUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0BF1C6CDA0300CDAB09 /* RACUtils.swift */; };
 		926EC0C21C6CDA6100CDAB09 /* Signals+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0C11C6CDA6100CDAB09 /* Signals+Extensions.swift */; };
+		926EC0C61C6CE1FA00CDAB09 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0C51C6CE1FA00CDAB09 /* GameViewModel.swift */; };
+		926EC0C81C6D81B200CDAB09 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0C71C6D81B200CDAB09 /* GameViewController.swift */; };
+		926EC0CA1C6E69AD00CDAB09 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0C91C6E69AD00CDAB09 /* GameModel.swift */; };
+		926EC0D21C6EAA4B00CDAB09 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0D11C6EAA4B00CDAB09 /* Player.swift */; };
+		926EC0D81C6EC41B00CDAB09 /* ArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0D71C6EC41B00CDAB09 /* ArrayUtils.swift */; };
+		926EC0DA1C6FC76B00CDAB09 /* TicTacToeGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC0D91C6FC76B00CDAB09 /* TicTacToeGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,12 @@
 		926EC0B71C6CD95500CDAB09 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		926EC0BF1C6CDA0300CDAB09 /* RACUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACUtils.swift; sourceTree = "<group>"; };
 		926EC0C11C6CDA6100CDAB09 /* Signals+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Signals+Extensions.swift"; sourceTree = "<group>"; };
+		926EC0C51C6CE1FA00CDAB09 /* GameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		926EC0C71C6D81B200CDAB09 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		926EC0C91C6E69AD00CDAB09 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		926EC0D11C6EAA4B00CDAB09 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		926EC0D71C6EC41B00CDAB09 /* ArrayUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayUtils.swift; sourceTree = "<group>"; };
+		926EC0D91C6FC76B00CDAB09 /* TicTacToeGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				926EC0801C6CD79E00CDAB09 /* AppDelegate.swift */,
+				926EC0C41C6CE1DF00CDAB09 /* ViewModel */,
+				926EC0C31C6CE1DA00CDAB09 /* Model */,
 				926EC0BC1C6CD9B700CDAB09 /* View */,
 				926EC0BB1C6CD9A600CDAB09 /* Utils */,
 				926EC0871C6CD79E00CDAB09 /* Assets.xcassets */,
@@ -144,6 +158,7 @@
 			children = (
 				926EC0B41C6CD8A200CDAB09 /* UIKitExtensions.swift */,
 				926EC0BF1C6CDA0300CDAB09 /* RACUtils.swift */,
+				926EC0D71C6EC41B00CDAB09 /* ArrayUtils.swift */,
 				926EC0C11C6CDA6100CDAB09 /* Signals+Extensions.swift */,
 			);
 			name = Utils;
@@ -153,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				926EC0B21C6CD82C00CDAB09 /* StartingViewController.swift */,
+				926EC0C71C6D81B200CDAB09 /* GameViewController.swift */,
+				926EC0D91C6FC76B00CDAB09 /* TicTacToeGridView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -164,6 +181,23 @@
 				926EC0B71C6CD95500CDAB09 /* Result.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		926EC0C31C6CE1DA00CDAB09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				926EC0C91C6E69AD00CDAB09 /* GameModel.swift */,
+				926EC0D11C6EAA4B00CDAB09 /* Player.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		926EC0C41C6CE1DF00CDAB09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				926EC0C51C6CE1FA00CDAB09 /* GameViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,10 +350,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926EC0C81C6D81B200CDAB09 /* GameViewController.swift in Sources */,
+				926EC0C61C6CE1FA00CDAB09 /* GameViewModel.swift in Sources */,
+				926EC0DA1C6FC76B00CDAB09 /* TicTacToeGridView.swift in Sources */,
 				926EC0C01C6CDA0300CDAB09 /* RACUtils.swift in Sources */,
+				926EC0D81C6EC41B00CDAB09 /* ArrayUtils.swift in Sources */,
 				926EC0B31C6CD82C00CDAB09 /* StartingViewController.swift in Sources */,
 				926EC0C21C6CDA6100CDAB09 /* Signals+Extensions.swift in Sources */,
+				926EC0CA1C6E69AD00CDAB09 /* GameModel.swift in Sources */,
 				926EC0811C6CD79E00CDAB09 /* AppDelegate.swift in Sources */,
+				926EC0D21C6EAA4B00CDAB09 /* Player.swift in Sources */,
 				926EC0B51C6CD8A200CDAB09 /* UIKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

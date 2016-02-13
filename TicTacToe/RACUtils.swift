@@ -15,9 +15,8 @@ import ReactiveCocoa
 import enum Result.NoError
 
 struct AssociationKey {
-    static var hidden: UInt8 = 1
-    static var enabled: UInt8 = 2
-    static var text: UInt8 = 3
+    static var enabled: UInt8 = 1
+    static var text: UInt8 = 2
 }
 
 // lazily creates a gettable associated property via the given factory
@@ -45,5 +44,11 @@ func lazyMutableProperty<T>(host: AnyObject, key: UnsafePointer<Void>, setter: T
 extension UIButton {
     public var rac_enabled: MutableProperty<Bool> {
         return lazyMutableProperty(self, key: &AssociationKey.enabled, setter: { self.enabled = $0 }, getter: { self.enabled  })
+    }
+}
+
+extension UILabel {
+    public var rac_text: MutableProperty<String> {
+        return lazyMutableProperty(self, key: &AssociationKey.text, setter: { self.text = $0 }, getter: { self.text ?? "" })
     }
 }

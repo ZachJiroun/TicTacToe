@@ -40,6 +40,13 @@ class StartingViewController: UIViewController {
         startGameButton.rac_enabled <~ signal
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showGame" {
+            let gameVM = GameViewModel(player1: self.player1TextField.text!, player2: self.player2TextField.text!)
+            let gameVC = segue.destinationViewController as! GameViewController
+            gameVC.viewModel = gameVM
+        }
+    }
     
     //    let gameVM = self.viewModel.createGameViewModel("Zach", "Ryan")
     //    let gameVC = GameViewController(viewModel: gameVM)
