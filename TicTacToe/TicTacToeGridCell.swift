@@ -1,5 +1,5 @@
 //
-//  TicTacToeGridView.swift
+//  TicTacToeGridCell.swift
 //  TicTacToe
 //
 //  Created by Zach Jiroun on 2/13/16.
@@ -9,11 +9,8 @@
 import Foundation
 import UIKit
 
-class TicTacToeGridCell: UIView {
+class TicTacToeGridCell: UICollectionViewCell {
     
-}
-
-class TicTacToeGrid: UIView {
+    @IBOutlet weak var markerImage: UIImageView!
     
-        
 }
