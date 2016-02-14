@@ -50,8 +50,8 @@ class GameModel {
         board = GameModel.newGameBoard()
     }
     
-    // Returns the player that has the next turn, nil if board is full
-    var nextTurn: Player? {
+    // Returns the player that has the current turn, nil if board is full
+    var currentTurn: Player? {
         get {
             let spaces = board.flatMap{ $0 }
             
@@ -69,6 +69,10 @@ class GameModel {
                 return p1
             }
         }
+    }
+    
+    func getValueAtSpace(x: Int, y: Int) -> GridSpace {
+        return board[x][y]
     }
     
     // Creates a 3x3 array of GridSpaces

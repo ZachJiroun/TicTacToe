@@ -40,27 +40,42 @@ class GameViewController: UIViewController, UICollectionViewDataSource, UICollec
     // MARK: UICollectionView
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return 3
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
+        return 3
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
+        let position = (indexPath.row, indexPath.section)
+        if viewModel!.isSpaceBlank(position) {
+            viewModel!.makeMove(position)
+            dispatch_async(dispatch_get_main_queue(), {
+                self.ticTacToeGrid.reloadData()
+            })
+        }
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = ticTacToeGrid.dequeueReusableCellWithReuseIdentifier("TicTacToeGridCell", forIndexPath: indexPath) as! TicTacToeGridCell
         
-        cell.markerImage.image = UIImage(named: "X")
+        let position = (indexPath.row, indexPath.section)
+        
+        // Reset any reused cell's contents to nil
+        cell.markerImage.image = nil
+        
+        if let m = viewModel!.getMarkerAtPosition(position) {
+            
+            print("\(m), \(position)")
+            cell.markerImage.image = UIImage(named: "\(m)")
+        }
         
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 0, 0, 0)
+        return UIEdgeInsetsMake(0, 0, 1, 0)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {

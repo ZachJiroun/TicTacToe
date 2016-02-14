@@ -37,10 +37,35 @@ class GameViewModel {
     }
     
     func getPlayerTurn() -> String {
-        guard let p = gameModel.nextTurn else {
+        guard let p = gameModel.currentTurn else {
             return "Game Over!"
         }
         return "\(p.name)'s Turn"
     }
     
+    // Returns marker if one exists at position, nil if Blank
+    func getMarkerAtPosition(space: (Int, Int)) -> Marker? {
+        let gridSpace: GridSpace = gameModel.getValueAtSpace(space.0, y: space.1)
+        switch gridSpace {
+        case .Marked(let m):
+            return m
+        default:
+            return nil
+        }
+    }
+    
+    func isSpaceBlank(space: (Int, Int)) -> Bool {
+        let space: GridSpace = gameModel.getValueAtSpace(space.0, y: space.1)
+        switch space {
+        case .Blank:
+            return true
+        default:
+            return false
+        }
+    }
+    
+    func makeMove(space: (Int, Int)) {
+        let p: Player = gameModel.currentTurn!
+        gameModel.markSpace(p.marker, space: space)
+    }
 }
