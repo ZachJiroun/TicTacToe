@@ -26,11 +26,15 @@ class GameViewController: UIViewController, UICollectionViewDataSource, UICollec
         ticTacToeGrid.dataSource = self
         ticTacToeGrid.delegate = self
         
+        player1Name.textColor = UIColor.xoRed()
+        player2Name.textColor = UIColor.xoLightBlue()
+        
         bindViewModel()
     }
     
     func bindViewModel() {
         currentPlayersTurnName.rac_text <~ viewModel!.currentPlayersTurnName
+        currentPlayersTurnName.rac_textColor <~ viewModel!.shouldSwitchColor.producer.map { $0 ? UIColor.xoRed() : UIColor.xoLightBlue() }
         player1Name.rac_text <~ viewModel!.player1Name
         player2Name.rac_text <~ viewModel!.player2Name
         player1Score.rac_text <~ viewModel!.player1Score
@@ -53,7 +57,8 @@ class GameViewController: UIViewController, UICollectionViewDataSource, UICollec
             let player = viewModel!.getCurrentPlayer()
             viewModel!.makeMove(position)
             refreshBoard()
-            if viewModel!.isGameOver(player) {
+            if viewModel!.isGameOver(player!) {
+                viewModel!.getPlayerTurn()
                 showAlert()
             }
         }

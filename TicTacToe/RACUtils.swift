@@ -17,6 +17,7 @@ import enum Result.NoError
 struct AssociationKey {
     static var enabled: UInt8 = 1
     static var text: UInt8 = 2
+    static var color: UInt8 = 3
 }
 
 // lazily creates a gettable associated property via the given factory
@@ -50,5 +51,8 @@ extension UIButton {
 extension UILabel {
     public var rac_text: MutableProperty<String> {
         return lazyMutableProperty(self, key: &AssociationKey.text, setter: { self.text = $0 }, getter: { self.text ?? "" })
+    }
+    public var rac_textColor: MutableProperty<UIColor> {
+        return lazyMutableProperty(self, key: &AssociationKey.color, setter: { self.textColor = $0 }, getter: { self.textColor })
     }
 }

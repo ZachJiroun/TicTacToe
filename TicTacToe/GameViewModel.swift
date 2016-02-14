@@ -16,6 +16,7 @@ class GameViewModel {
     let player2Name = MutableProperty<String>("")
     let player1Score = MutableProperty<String>("")
     let player2Score = MutableProperty<String>("")
+    let shouldSwitchColor = MutableProperty<Bool>(false)
     
     private var gameModel: GameModel
     
@@ -34,14 +35,26 @@ class GameViewModel {
     func startNewGame() {
         gameModel.resetGame()
         getPlayerTurn()
+        shouldSwitchColor.value = true
     }
     
     func isGameOver(p: Player) -> Bool {
-        return gameModel.didPlayerWin(p)
+        if gameModel.didPlayerWin(p) {
+            p.score += 1
+            if p.marker == .X {
+                self.player1Score.value = getPlayerScore(gameModel.p1)
+            } else {
+                self.player2Score.value = getPlayerScore(gameModel.p2)
+            }
+            return true
+        } else if gameModel.isDraw() {
+            return true
+        }
+        return false
     }
     
-    func getCurrentPlayer() -> Player {
-        return gameModel.currentTurn!
+    func getCurrentPlayer() -> Player? {
+        return gameModel.currentTurn
     }
     
     func getPlayerScore(p: Player) -> String {
@@ -54,6 +67,7 @@ class GameViewModel {
             return
         }
         currentPlayersTurnName.value = "\(p.name)'s Turn"
+        shouldSwitchColor.value = !shouldSwitchColor.value
     }
     
     // Returns marker if one exists at position, nil if Blank

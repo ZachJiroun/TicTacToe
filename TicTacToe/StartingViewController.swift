@@ -48,7 +48,4 @@ class StartingViewController: UIViewController {
         }
     }
     
-    //    let gameVM = self.viewModel.createGameViewModel("Zach", "Ryan")
-    //    let gameVC = GameViewController(viewModel: gameVM)
-    //    self.pushViewController(gameVC, animated: true, completion: nil)
 }

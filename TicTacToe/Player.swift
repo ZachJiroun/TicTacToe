@@ -9,7 +9,7 @@
 import Foundation
 
 // Represents a player
-struct Player {
+class Player {
     let name: String
     let marker: Marker
     var score: Int

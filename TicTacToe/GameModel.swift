@@ -36,8 +36,8 @@ func == (lhs: GridSpace, rhs: GridSpace) -> Bool {
 
 class GameModel {
     
-    let p1: Player
-    let p2: Player
+    var p1: Player
+    var p2: Player
     var board: GameBoard
     
     init(player1: String, player2: String) {
@@ -71,6 +71,15 @@ class GameModel {
         }
     }
     
+    // Check if all spaces contain a marker
+    func isDraw() -> Bool {
+        let spaces = board.flatMap{ $0 }
+        if spaces.count == (spaces.filter { s in s != GridSpace.Blank }).count {
+            return true
+        }
+        return false
+    }
+    
     func getValueAtSpace(x: Int, y: Int) -> GridSpace {
         return board[x][y]
     }
@@ -88,7 +97,7 @@ class GameModel {
     }
     
     func checkRows(m: Marker, b:GameBoard) ->  Bool {
-        for row in board {
+        for row in b {
             // If the row contains all of the same, find out what the contents are
             if allEqual(row) {
                 if let rowMarker = row.first {
