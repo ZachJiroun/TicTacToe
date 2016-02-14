@@ -50,10 +50,12 @@ class GameViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let position = (indexPath.row, indexPath.section)
         if viewModel!.isSpaceBlank(position) {
+            let player = viewModel!.getCurrentPlayer()
             viewModel!.makeMove(position)
-            dispatch_async(dispatch_get_main_queue(), {
-                self.ticTacToeGrid.reloadData()
-            })
+            refreshBoard()
+            if viewModel!.isGameOver(player) {
+                showAlert()
+            }
         }
     }
     
@@ -66,8 +68,6 @@ class GameViewController: UIViewController, UICollectionViewDataSource, UICollec
         cell.markerImage.image = nil
         
         if let m = viewModel!.getMarkerAtPosition(position) {
-            
-            print("\(m), \(position)")
             cell.markerImage.image = UIImage(named: "\(m)")
         }
         
@@ -80,5 +80,27 @@ class GameViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 1.0
+    }
+    
+    // MARK: Helpers
+    
+    func refreshBoard() {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.ticTacToeGrid.reloadData()
+        })
+    }
+    
+    func showAlert() {
+        let alertController = UIAlertController(title: "Game Over!", message: "Would you like to play again?", preferredStyle: .Alert)
+        let yesAction = UIAlertAction(title: "Yes", style: .Default, handler: { Void in
+            self.viewModel!.startNewGame()
+            self.refreshBoard()
+        })
+        let noAction = UIAlertAction(title: "No", style: .Cancel, handler: { Void in
+            self.navigationController?.popViewControllerAnimated(true)
+        })
+        alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 }

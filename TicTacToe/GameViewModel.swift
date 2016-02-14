@@ -28,19 +28,32 @@ class GameViewModel {
         self.player1Score.value = getPlayerScore(gameModel.p1)
         self.player2Score.value = getPlayerScore(gameModel.p2)
         
-        self.currentPlayersTurnName.value = getPlayerTurn()
-        
+        getPlayerTurn()
+    }
+    
+    func startNewGame() {
+        gameModel.resetGame()
+        getPlayerTurn()
+    }
+    
+    func isGameOver(p: Player) -> Bool {
+        return gameModel.didPlayerWin(p)
+    }
+    
+    func getCurrentPlayer() -> Player {
+        return gameModel.currentTurn!
     }
     
     func getPlayerScore(p: Player) -> String {
         return String(p.score)
     }
     
-    func getPlayerTurn() -> String {
+    func getPlayerTurn() {
         guard let p = gameModel.currentTurn else {
-            return "Game Over!"
+            currentPlayersTurnName.value = "Game Over!"
+            return
         }
-        return "\(p.name)'s Turn"
+        currentPlayersTurnName.value = "\(p.name)'s Turn"
     }
     
     // Returns marker if one exists at position, nil if Blank
@@ -67,5 +80,6 @@ class GameViewModel {
     func makeMove(space: (Int, Int)) {
         let p: Player = gameModel.currentTurn!
         gameModel.markSpace(p.marker, space: space)
+        getPlayerTurn()
     }
 }
