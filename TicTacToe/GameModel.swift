@@ -46,6 +46,7 @@ class GameModel {
         board = GameModel.newGameBoard()
     }
     
+    // Resets the game board
     func resetGame() {
         board = GameModel.newGameBoard()
     }
@@ -80,6 +81,7 @@ class GameModel {
         return false
     }
     
+    // Returns the Gridspace at the given space
     func getValueAtSpace(x: Int, y: Int) -> GridSpace {
         return board[x][y]
     }
@@ -96,6 +98,7 @@ class GameModel {
         return checkRows(m, b: board) || checkColumns(m) || checkDiagonals(m)
     }
     
+    // Check horizontally for 3 of a kind marker
     func checkRows(m: Marker, b:GameBoard) ->  Bool {
         for row in b {
             // If the row contains all of the same, find out what the contents are
@@ -113,12 +116,14 @@ class GameModel {
         return false
     }
     
+    // Check vertically for 3 of a kind marker
     func checkColumns(m: Marker) -> Bool {
         // Flip rows and cols, then use checkRows
         let flippedBoard = flipArray(board)
         return checkRows(m, b: flippedBoard)
     }
     
+    // Check diagonaly for 3 of a kind marker
     func checkDiagonals(m: Marker) -> Bool {
         // Check left-to-right diagonal
         if board[0][0] == board[1][1] {

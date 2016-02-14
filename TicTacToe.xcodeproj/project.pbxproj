@@ -101,11 +101,11 @@
 		926EC0741C6CD79E00CDAB09 = {
 			isa = PBXGroup;
 			children = (
-				926EC0BE1C6CD9D600CDAB09 /* Frameworks */,
 				926EC07F1C6CD79E00CDAB09 /* TicTacToe */,
 				926EC0941C6CD79E00CDAB09 /* TicTacToeTests */,
 				926EC09F1C6CD79E00CDAB09 /* TicTacToeUITests */,
 				926EC07E1C6CD79E00CDAB09 /* Products */,
+				926EC0BE1C6CD9D600CDAB09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,9 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				926EC0801C6CD79E00CDAB09 /* AppDelegate.swift */,
-				926EC0C41C6CE1DF00CDAB09 /* ViewModel */,
 				926EC0C31C6CE1DA00CDAB09 /* Model */,
 				926EC0BC1C6CD9B700CDAB09 /* View */,
+				926EC0C41C6CE1DF00CDAB09 /* ViewModel */,
 				926EC0BB1C6CD9A600CDAB09 /* Utils */,
 				926EC0871C6CD79E00CDAB09 /* Assets.xcassets */,
 				926EC0B01C6CD80800CDAB09 /* Main.storyboard */,
@@ -574,6 +574,7 @@
 				926EC0A71C6CD79E00CDAB09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		926EC0A81C6CD79E00CDAB09 /* Build configuration list for PBXNativeTarget "TicTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +583,7 @@
 				926EC0AA1C6CD79E00CDAB09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		926EC0AB1C6CD79E00CDAB09 /* Build configuration list for PBXNativeTarget "TicTacToeUITests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +592,7 @@
 				926EC0AD1C6CD79E00CDAB09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

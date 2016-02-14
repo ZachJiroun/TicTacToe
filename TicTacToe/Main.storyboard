@@ -35,7 +35,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.12549019610000001" green="0.41960784309999999" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.12549019610000001" green="0.41960784309999999" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,7 +60,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.12549019610000001" green="0.41960784309999999" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.12549019610000001" green="0.41960784309999999" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>

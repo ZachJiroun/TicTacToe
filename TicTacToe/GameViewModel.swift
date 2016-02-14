@@ -32,12 +32,14 @@ class GameViewModel {
         getPlayerTurn()
     }
     
+    // Resets the state of the game
     func startNewGame() {
         gameModel.resetGame()
         getPlayerTurn()
         shouldSwitchColor.value = true
     }
     
+    // Returns true if a player won, or there was a draw (no more spaces left)
     func isGameOver(p: Player) -> Bool {
         if gameModel.didPlayerWin(p) {
             p.score += 1
@@ -91,6 +93,7 @@ class GameViewModel {
         }
     }
     
+    // Gets the current player, makes a move, and switches turns
     func makeMove(space: (Int, Int)) {
         let p: Player = gameModel.currentTurn!
         gameModel.markSpace(p.marker, space: space)
